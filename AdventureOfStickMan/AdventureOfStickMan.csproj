@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{707C4B8A-8587-4F01-9CAA-795367B58F8D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AdventureOfStickMan</RootNamespace>
+    <AssemblyName>AdventureOfStickMan</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9FE277090630854E312B838057C7EDD001463EB3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AdventureOfStickMan_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alchemist.cs" />
+    <Compile Include="AOEDamageSkill.cs" />
+    <Compile Include="ArmorSkill.cs" />
+    <Compile Include="BuffSkill.cs" />
+    <Compile Include="CharacterSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterSelection.Designer.cs">
+      <DependentUpon>CharacterSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CombatHandler.cs" />
+    <Compile Include="ETypes.cs" />
+    <Compile Include="GameMethods.cs" />
+    <Compile Include="GameUnit.cs" />
+    <Compile Include="HealingSkill.cs" />
+    <Compile Include="LoggerBox.cs" />
+    <Compile Include="MouseState.cs" />
+    <Compile Include="SingleTargetSkill.cs" />
+    <Compile Include="SkeletonArcher.cs" />
+    <Compile Include="SkeletonKing.cs" />
+    <Compile Include="SkeletonWarrior.cs" />
+    <Compile Include="SkeletonWizard.cs" />
+    <Compile Include="Skill.cs" />
+    <Compile Include="StunSkill.cs" />
+    <Compile Include="Thief.cs" />
+    <Compile Include="Wizard.cs" />
+    <Compile Include="Party.cs" />
+    <Compile Include="Knight.cs" />
+    <Compile Include="Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scene.cs" />
+    <Compile Include="StartMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartMenu.Designer.cs">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CharacterSelection.resx">
+      <DependentUpon>CharacterSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StartMenu.resx">
+      <DependentUpon>StartMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AdventureOfStickMan_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stick_Figure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stick_Figure_Healer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stick_Figure_Knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stick_Figure_Thief.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stick_Figure_Wizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saber-slash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vibrating-shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\confrontation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stoned-skull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TurnArrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ice_bolt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wind-slap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightning-trio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoverIndicator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StartMenu_BG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CharacterSelection_BG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alch_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knight_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectFrame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thief_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Wizard_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\architect-mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloak-dagger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dagger-rose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daggers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fizzing-flask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\health-potion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magic-potion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potion-ball.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skeleton_Archer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skeleton_King.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skeleton_Warrior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Skeleton_Wizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stunned_Stars.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
